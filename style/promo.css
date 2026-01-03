@@ -1,6 +1,119 @@
+.promo {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    padding-top: 45px;
+}
+
+.promo-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.container-info {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-left: 5%;
+}
+
+.container-info h2 {
+    color: var(--primary-color);
+    font-size: var(--font-size-head);
+    text-align: left;
+    width: min-content;
+}
+
+.container-info p {
+    color: var(--primary-color);
+    font-size: var(--font-size-text);
+    text-align: left;
+    line-height: 38px;
+}
+
+.container-info p>span {
+    font-weight: bold;
+}
+
+.container-images {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../images/promo/Star2.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.container-images> :first-child {
+    align-self: flex-start;
+    background-image: url("../images/promo/Star3.svg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+.container-images> :nth-child(2) {
+    padding-left: 25%;
+}
+
+.container-images> :nth-child(3) {
+    text-align: end;
+}
+
+.image-element {
+    width: 55%;
+    border-radius: 50%;
+}
+
 @media screen and (max-width:1024px) {
+    .promo-container {
+        gap: 10px;
+    }
+
+    .container-info {
+        padding-left: 0;
+        width: 50%;
+        gap: 30px;
+    }
+
+    .container-images {
+        width: 40%;
+        align-self: flex-end;
+    }
+
+    .star-image {
+        width: 40px;
+        height: 40px;
+    }
 }
+
 @media screen and (max-width:768px) {
-}
-@media screen and (max-width:639px) {
+    .promo {
+        padding-top: 15px;
+    }
+
+    .promo-container {
+        background-image: url("../images/promo/Star1For768px.svg");
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        padding-top: 0;
+    }
+
+    .container-info {
+        width: 90%;
+        padding-bottom: 20px;
+    }
+
+    .container-images {
+        display: none;
+    }
 }
