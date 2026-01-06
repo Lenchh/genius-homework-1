@@ -80,7 +80,7 @@
 @media screen and (max-width:768px) {
     .header {
         backdrop-filter: none;
-        -webkit-backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(0px);
         background: none;
     }
 
