@@ -62,30 +62,3 @@ h2 > span {
     font-weight: 600;
     font-style: normal;
 }
-
-.arrow-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid var(--primary-color);
-    padding: 0;
-}
-
-.arrow-button:hover {
-    background-color: var(--primary-color);
-    cursor: pointer;
-}
-
-.arrow-button:hover .arrow-right,
-.arrow-button:hover .icons-header {
-    fill: var(--bg-color);
-}
-
-.arrow-right {
-    fill: var(--primary-color);
-    transform: rotate(180deg);
-}

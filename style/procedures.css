@@ -1,5 +1,5 @@
 .procedures {
-     max-width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -8,11 +8,12 @@
 }
 
 .procedures-container {
-    width: 95%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 }
 
 .procedures-container h2 {
@@ -26,15 +27,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
-.photo-element, .photo-block {
+.photo-block {
+    position: relative;
     max-width: 344px;
     width: 30%;
+    max-height: 456px;
 }
 
 .photo-block img {
     width: 100%;
+    border-radius: 4px 110px;
+    height: 100%;
 }
 
 .photo-block p {
@@ -43,17 +49,121 @@
     line-height: 26px;
     letter-spacing: 0%;
     text-align: center;
-    position: relative;
-    bottom: 30%;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    left: 0;
+    z-index: 100;
 }
 
-.right-arrow {
-    transform: rotate(180deg);
+.photo-gradient {
+    position: absolute;
+    bottom: 0;
+    /* right: 0; */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,
+            #132b4a 0%,
+            rgba(19, 43, 74, 0.3) 40%,
+            rgba(19, 43, 74, 0) 80%,
+            rgba(19, 43, 74, 0) 100%);
+    border-radius: 4px 120px;
+}
+
+.arrow-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    padding: 0;
+    background-image: url("../images/procedures/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.arrow-button:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+    background-image: url("../images/procedures/arrowHover.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.arrow-right {
+    background-image: url("../images/procedures/arrowRight.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.arrow-right:hover {
+    background-image: url("../images/procedures/arrowRightHover.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pagination-dots {
+    width: 121px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    background-color: var(--color-text-muted);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.select-dot {
+    background-color: var(--secondary-color);
+}
+
+@media screen and (max-width:1240px) {
+    .procedures-container {
+        width: 100%;
+    }
+    .photo-gallery {
+        gap: 10px;
+    }
+    .photo-block {
+        max-width: 320px;
+    }
 }
 
 @media screen and (max-width:1024px) {
+    .arrow-button {
+        width: 33px;
+        height: 33px;
+    }
 }
+
 @media screen and (max-width:768px) {
+    .photo-gallery > :nth-child(4) {
+        display: none;
+    }
+    .photo-block {
+        width: 45%;
+    }
 }
-@media screen and (max-width:639px) {
+
+@media screen and (max-width:576px) {
+     .photo-gallery > :nth-child(1),
+    .photo-gallery > :nth-child(3),
+    .photo-gallery > :nth-child(5) {
+        display: none;
+    }
+     .photo-gallery {
+        justify-content: center;
+    }
+
+    .photo-block {
+        width: 90%;
+    }
+
 }
