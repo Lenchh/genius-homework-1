@@ -1,6 +1,139 @@
+.footer {
+    max-width: 1440px;
+    width: 100%;
+    background-color: var(--primary-color);
+    background-image: url("../images/footer/background.webp");
+    margin: 0 auto;
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.footer-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-head {
+    font-size: var(--font-size-text);
+}
+
+.contain-block,
+.block-contacts {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.contain-block ul {
+    width: 100%;
+}
+
+.contain-block li,
+.privacy-policy {
+    color: var(--bg-color);
+    font-size: 16px;
+}
+
+.block-socialMedia {
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.protected-data {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-small-text);
+}
+
+.img-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.footer-container>.protected-data {
+    display: none;
+}
+
 @media screen and (max-width:1024px) {
+    .img-footer {
+        width: 25%;
+    }
 }
+
 @media screen and (max-width:768px) {
+    .footer-container {
+        flex-wrap: wrap;
+        row-gap: 25px;
+        width: 80%;
+    }
+
+    .contain-block,
+    .block-contacts {
+        width: 50%;
+    }
+
+    .right-side {
+        align-items: end;
+    }
 }
+
 @media screen and (max-width:639px) {
+    .footer {
+        background-image: url("../images/footer/background.png");
+        padding: 30px 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 8px;
+    }
+
+    .privacy-policy {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .text-head {
+        padding-bottom: 20px;
+    }
+
+    .contain-block,
+    .block-contacts {
+        width: 90%;
+    }
+
+    .right-side {
+        align-items: center;
+    }
+
+    .block-socialMedia {
+        justify-content: center;
+    }
+
+    .block-contacts,
+    .img-footer,
+    .contain-block>.protected-data {
+        display: none;
+    }
+
+    .footer-container> :nth-child(3) {
+        order: 1;
+    }
+
+    .footer-container> :nth-child(5) {
+        order: 2;
+    }
+
+    .footer-container>.protected-data {
+        display: block;
+    }
 }

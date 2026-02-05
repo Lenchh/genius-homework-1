@@ -19,9 +19,9 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Высота размытия */
+    height: 50px;
     background: linear-gradient(to bottom, transparent, #ffffff);
-    pointer-events: none; /* Чтобы сквозь градиент можно было кликать, если там что-то есть */
+    pointer-events: none;
 }
 
 .services-container {
