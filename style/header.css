@@ -28,7 +28,7 @@
     justify-content: space-between;
 }
 
-.header li {
+.header a, .header li {
     font-size: var(--font-size-text);
     color: var(--primary-color);
     cursor: pointer;

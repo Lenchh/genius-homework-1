@@ -37,6 +37,10 @@
     object-fit: cover;
 }
 
+.block-img img {
+    width: 100%;
+}
+
 .block-form {
     width: 35%;
     max-height: 481px;

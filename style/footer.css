@@ -35,9 +35,11 @@
 }
 
 .contain-block li,
-.privacy-policy {
+.privacy-policy,
+.contain-block a {
     color: var(--bg-color);
     font-size: 16px;
+    cursor: pointer;
 }
 
 .block-socialMedia {
@@ -50,6 +52,7 @@
 .protected-data {
     color: var(--color-text-muted);
     font-size: var(--font-size-small-text);
+    cursor: pointer;
 }
 
 .img-footer {
